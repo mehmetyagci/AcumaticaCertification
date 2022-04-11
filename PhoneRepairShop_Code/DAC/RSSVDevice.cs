@@ -1,5 +1,9 @@
-﻿using PX.Data;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using PX.Data;
 
 namespace PhoneRepairShop {
     [PXCacheName("Serviced Device")]
@@ -14,13 +18,13 @@ namespace PhoneRepairShop {
 
         #region DeviceCD
         [PXDBString(15, IsUnicode = true, IsKey = true,
-        InputMask = ">aaaaaaaaaaaaaaa")]
+            InputMask = ">aaaaaaaaaaaaaaa")]
         [PXDefault]
         [PXUIField(DisplayName = "Device Code")]
         [PXSelector(typeof(Search<RSSVDevice.deviceCD>),
-        typeof(RSSVDevice.deviceCD),
-        typeof(RSSVDevice.active),
-        typeof(RSSVDevice.avgComplexityOfRepair))]
+                            typeof(RSSVDevice.deviceCD),
+                            typeof(RSSVDevice.active),
+                            typeof(RSSVDevice.avgComplexityOfRepair))]
         public virtual string DeviceCD { get; set; }
         public abstract class deviceCD : PX.Data.BQL.BqlString.Field<deviceCD> { }
         #endregion
@@ -29,7 +33,7 @@ namespace PhoneRepairShop {
         [PXDBString(256, IsUnicode = true, InputMask = "")]
         [PXUIField(DisplayName = "Description")]
         public virtual string Description { get; set; }
-        public abstract class description :
+        public abstract class description : 
         PX.Data.BQL.BqlString.Field<description> { }
         #endregion
 
@@ -46,19 +50,19 @@ namespace PhoneRepairShop {
         [PXDefault(RepairComplexity.Medium)]
         [PXUIField(DisplayName = "Complexity")]
         [PXStringList(
-        new string[]
-        {
- RepairComplexity.Low,
- RepairComplexity.Medium,
- RepairComplexity.High
-        },
-        new string[]
-        {
- Messages.Low, Messages.Medium, Messages.High
-        })]
+            new string[]
+            {
+                RepairComplexity.Low,
+                RepairComplexity.Medium,
+                RepairComplexity.High
+            },
+            new string[]
+            {
+                Messages.Low, Messages.Medium, Messages.High
+            })]
         public virtual string AvgComplexityOfRepair { get; set; }
         public abstract class avgComplexityOfRepair :
-        PX.Data.BQL.BqlString.Field<avgComplexityOfRepair> { }
+            PX.Data.BQL.BqlString.Field<avgComplexityOfRepair> { }
         #endregion
 
         #region CreatedDateTime
@@ -70,43 +74,50 @@ namespace PhoneRepairShop {
         #region CreatedByID
         [PXDBCreatedByID()]
         public virtual Guid? CreatedByID { get; set; }
-        public abstract class createdByID : PX.Data.BQL.BqlGuid.Field<createdByID> { }
+        public abstract class createdByID :
+            PX.Data.BQL.BqlGuid.Field<createdByID> { }
         #endregion
 
         #region CreatedByScreenID
         [PXDBCreatedByScreenID()]
         public virtual string CreatedByScreenID { get; set; }
-        public abstract class createdByScreenID : PX.Data.BQL.BqlString.Field<createdByScreenID> { }
+        public abstract class createdByScreenID :
+            PX.Data.BQL.BqlString.Field<createdByScreenID> { }
         #endregion
 
         #region LastModifiedDateTime
         [PXDBLastModifiedDateTime()]
         public virtual DateTime? LastModifiedDateTime { get; set; }
-        public abstract class lastModifiedDateTime : PX.Data.BQL.BqlDateTime.Field<lastModifiedDateTime> { }
+        public abstract class lastModifiedDateTime :
+            PX.Data.BQL.BqlDateTime.Field<lastModifiedDateTime> { }
         #endregion
 
         #region LastModifiedByID
         [PXDBLastModifiedByID()]
         public virtual Guid? LastModifiedByID { get; set; }
-        public abstract class lastModifiedByID : PX.Data.BQL.BqlGuid.Field<lastModifiedByID> { }
+        public abstract class lastModifiedByID :
+            PX.Data.BQL.BqlGuid.Field<lastModifiedByID> { }
         #endregion
 
         #region LastModifiedByScreenID
         [PXDBLastModifiedByScreenID()]
         public virtual string LastModifiedByScreenID { get; set; }
-        public abstract class lastModifiedByScreenID : PX.Data.BQL.BqlString.Field<lastModifiedByScreenID> { }
+        public abstract class lastModifiedByScreenID :
+            PX.Data.BQL.BqlString.Field<lastModifiedByScreenID> { }
         #endregion
 
         #region Tstamp
         [PXDBTimestamp()]
         public virtual byte[] Tstamp { get; set; }
-        public abstract class tstamp : PX.Data.BQL.BqlByteArray.Field<tstamp> { }
+        public abstract class tstamp :
+            PX.Data.BQL.BqlByteArray.Field<tstamp> { }
         #endregion
 
-        #region Noteid
+        #region NoteID
         [PXNote()]
         public virtual Guid? NoteID { get; set; }
-        public abstract class noteID : PX.Data.BQL.BqlGuid.Field<noteID> { }
+        public abstract class noteID :
+            PX.Data.BQL.BqlGuid.Field<noteID> { }
         #endregion
     }
 }

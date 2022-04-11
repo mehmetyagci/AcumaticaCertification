@@ -63,6 +63,7 @@
     <Compile Include="DAC\RSSVDevice.cs" />
     <Compile Include="DAC\RSSVLabor.cs" />
     <Compile Include="DAC\RSSVWarranty.cs" />
+    <Compile Include="Data\InputData.cs" />
     <Compile Include="Helper\AcumaticaEncrypt.cs" />
     <Compile Include="Helper\AnterraMenu.cs" />
     <Compile Include="Helper\Constants.cs" />

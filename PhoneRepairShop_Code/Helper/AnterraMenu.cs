@@ -57,7 +57,7 @@ namespace PhoneRepairShop {
                 }
                 var tempURI = i.itemUrl.Contains("://widgets")
                     ? $"https://widgets.qa.anterracloudbi.com/?anttok={anterraToken}"
-                    : $"{URIprefix}?{Constants.AnterraTokenParamName}={anterraToken}#/{i.itemUrl}?hideMenu=1"; // &{Constants.AnterraTokenParamName}={anterraToken}"
+                    : $"{URIprefix}?{"Constants.AnterraTokenParamName"}={anterraToken}#/{i.itemUrl}?hideMenu=1"; // &{Constants.AnterraTokenParamName}={anterraToken}"
                 subGroup.Children.Add(new MenuItem {
                     Title = i.itemName,
                     Tooltip = i.itemDescription,

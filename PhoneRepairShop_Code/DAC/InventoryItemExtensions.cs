@@ -35,26 +35,26 @@ namespace PX.Objects.IN {
         #region UsrRepairItemType
         [PXDBString(2, IsFixed = true)]
         [PXStringList(
-        new string[]
-        {
-PhoneRepairShop.RepairItemTypeConstants.Battery,
-PhoneRepairShop.RepairItemTypeConstants.Screen,
-PhoneRepairShop.RepairItemTypeConstants.ScreenCover,
-PhoneRepairShop.RepairItemTypeConstants.BackCover,
-PhoneRepairShop.RepairItemTypeConstants.Motherboard
-        },
-        new string[]
-        {
-PhoneRepairShop.Messages.Battery,
-PhoneRepairShop.Messages.Screen,
-PhoneRepairShop.Messages.ScreenCover,
-PhoneRepairShop.Messages.BackCover,
-PhoneRepairShop.Messages.Motherboard
-        })]
+            new string[]
+            {
+                PhoneRepairShop.RepairItemTypeConstants.Battery,
+                PhoneRepairShop.RepairItemTypeConstants.Screen,
+                PhoneRepairShop.RepairItemTypeConstants.ScreenCover,
+                PhoneRepairShop.RepairItemTypeConstants.BackCover,
+                PhoneRepairShop.RepairItemTypeConstants.Motherboard
+            },
+            new string[]
+            {
+                PhoneRepairShop.Messages.Battery,
+                PhoneRepairShop.Messages.Screen,
+                PhoneRepairShop.Messages.ScreenCover,
+                PhoneRepairShop.Messages.BackCover,
+                PhoneRepairShop.Messages.Motherboard
+            })]
         [PXUIField(DisplayName = "Repair Item Type", Enabled = false)]
         public string UsrRepairItemType { get; set; }
         public abstract class usrRepairItemType :
-        PX.Data.BQL.BqlString.Field<usrRepairItemType> { }
+            PX.Data.BQL.BqlString.Field<usrRepairItemType> { }
         #endregion
     }
 }
