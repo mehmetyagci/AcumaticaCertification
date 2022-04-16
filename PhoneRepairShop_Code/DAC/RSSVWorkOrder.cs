@@ -43,24 +43,24 @@ namespace PhoneRepairShop {
         [PXDefault(WorkOrderStatusConstants.OnHold)]
         [PXUIField(DisplayName = "Status", Enabled = false)]
         [PXStringList(
-                new string[]
-                {
+            new string[]
+            {
                 WorkOrderStatusConstants.OnHold,
                 WorkOrderStatusConstants.PendingPayment,
                 WorkOrderStatusConstants.ReadyForAssignment,
                 WorkOrderStatusConstants.Assigned,
                 WorkOrderStatusConstants.Completed,
                 WorkOrderStatusConstants.Paid
-                },
-                new string[]
-                {
+            },
+            new string[]
+            {
                 Messages.OnHold,
                 Messages.PendingPayment,
                 Messages.ReadyForAssignment,
                 Messages.Assigned,
                 Messages.Completed,
                 Messages.Paid
-                })]
+            })]
         public virtual string Status { get; set; }
         public abstract class status : PX.Data.BQL.BqlString.Field<status> { }
         #endregion
@@ -84,10 +84,10 @@ namespace PhoneRepairShop {
         [PXDefault]
         [PXUIField(DisplayName = "Service", Visibility = PXUIVisibility.SelectorVisible)]
         [PXSelector(typeof(Search<RSSVRepairService.serviceID>),
-typeof(RSSVRepairService.serviceCD),
-typeof(RSSVRepairService.description),
-SubstituteKey = typeof(RSSVRepairService.serviceCD),
-DescriptionField = typeof(RSSVRepairService.description))]
+            typeof(RSSVRepairService.serviceCD),
+            typeof(RSSVRepairService.description),
+            SubstituteKey = typeof(RSSVRepairService.serviceCD),
+            DescriptionField = typeof(RSSVRepairService.description))]
         public virtual int? ServiceID { get; set; }
         public abstract class serviceID : PX.Data.BQL.BqlInt.Field<serviceID> { }
         #endregion
@@ -97,10 +97,10 @@ DescriptionField = typeof(RSSVRepairService.description))]
         [PXDefault]
         [PXUIField(DisplayName = "Device", Visibility = PXUIVisibility.SelectorVisible)]
         [PXSelector(typeof(Search<RSSVDevice.deviceID>),
-typeof(RSSVDevice.deviceCD),
-typeof(RSSVDevice.description),
-SubstituteKey = typeof(RSSVDevice.deviceCD),
-DescriptionField = typeof(RSSVDevice.description))]
+            typeof(RSSVDevice.deviceCD),
+            typeof(RSSVDevice.description),
+            SubstituteKey = typeof(RSSVDevice.deviceCD),
+            DescriptionField = typeof(RSSVDevice.description))]
         public virtual int? DeviceID { get; set; }
         public abstract class deviceID : PX.Data.BQL.BqlInt.Field<deviceID> { }
         #endregion
@@ -131,18 +131,18 @@ DescriptionField = typeof(RSSVDevice.description))]
         [PXDefault(WorkOrderPriorityConstants.Medium)]
         [PXUIField(DisplayName = "Priority")]
         [PXStringList(
-new string[]
-{
-WorkOrderPriorityConstants.High,
-WorkOrderPriorityConstants.Medium,
-WorkOrderPriorityConstants.Low
-},
-new string[]
-{
-Messages.High,
-Messages.Medium,
-Messages.Low
-})]
+            new string[]
+            {
+                WorkOrderPriorityConstants.High,
+                WorkOrderPriorityConstants.Medium,
+                WorkOrderPriorityConstants.Low
+            },
+            new string[]
+            {
+                Messages.High,
+                Messages.Medium,
+                Messages.Low
+            })]
         public virtual string Priority { get; set; }
         public abstract class priority : PX.Data.BQL.BqlString.Field<priority> { }
         #endregion
