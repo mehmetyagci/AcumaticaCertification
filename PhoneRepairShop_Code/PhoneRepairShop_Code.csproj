@@ -83,6 +83,10 @@
     <Compile Include="RSSVRepairPriceMaint.cs" />
     <Compile Include="DAC\RSSVRepairItem.cs" />
     <Compile Include="DAC\RSSVRepairPrice.cs" />
+    <Compile Include="RSSVWorkOrderEntry.cs" />
+    <Compile Include="DAC\RSSVWorkOrderLabor.cs" />
+    <Compile Include="DAC\RSSVWorkOrderItem.cs" />
+    <Compile Include="DAC\RSSVWorkOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DAC\RSSVStockItemDevice.cs" />
   </ItemGroup>

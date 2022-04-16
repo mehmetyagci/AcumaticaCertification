@@ -10,7 +10,7 @@ namespace PhoneRepairShop
     [PXLocalizable()]
     public static class Messages
     {
-        //Complexity of repair
+        //Complexity of repair and work order priorities
         public const string High = "High";
         public const string Medium = "Medium";
         public const string Low = "Low";
@@ -28,5 +28,13 @@ namespace PhoneRepairShop
         public const string ItemIsStock = "This item is a stock item.";
         public const string DefaultWarrantyCanNotBeDeleted =
             "The default warranty cannot be deleted.";
+
+        //Work order statuses
+        public const string OnHold = "On Hold";
+        public const string PendingPayment = "Pending Payment";
+        public const string ReadyForAssignment = "Ready for Assignment";
+        public const string Assigned = "Assigned";
+        public const string Completed = "Completed";
+        public const string Paid = "Paid";
     }
 }
